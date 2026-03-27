@@ -3,18 +3,16 @@ fetch("data/produtos.json")
   .then(data => {
 
     const numero = data.whatsapp;
-    const produtos = data.items;
+    const produtos = data.produtos;
 
     const container = document.getElementById("produtos");
 
     produtos.forEach(p => {
-      const imagem = p.imagens[0];
-
       const link = `https://wa.me/${numero}?text=Olá, quero ${p.nome}`;
 
       container.innerHTML += `
         <div class="card">
-          <img src="${imagem}">
+          <img src="${p.imagem}">
           <div class="card-content">
             <h3>${p.nome}</h3>
             <p>${p.preco}</p>
