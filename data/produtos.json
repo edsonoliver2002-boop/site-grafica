@@ -1,0 +1,12 @@
+{
+  "whatsapp": "5599999999999",
+  "items": [
+    {
+      "nome": "Cartão de Visita",
+      "preco": "R$50",
+      "imagens": [
+        "https://via.placeholder.com/300"
+      ]
+    }
+  ]
+}
