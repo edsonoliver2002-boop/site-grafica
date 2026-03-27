@@ -1,0 +1,27 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "config"
+    label: "Configurações"
+    files:
+      - label: "Site"
+        name: "site"
+        file: "data/produtos.json"
+        fields:
+          - { label: "WhatsApp", name: "whatsapp", widget: "string" }
+
+          - label: "Produtos"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Nome", name: "nome", widget: "string" }
+              - { label: "Preço", name: "preco", widget: "string" }
+              - label: "Imagens"
+                name: "imagens"
+                widget: "list"
+                field: { label: "Imagem", name: "image", widget: "image" }
